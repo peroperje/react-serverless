@@ -10,8 +10,8 @@ import FontAwesomeIcon,{faBars} from 'UI/components/FontAwesomeIcon'
  * @returns {XML}
  */
 function ToggleBtn({onClick}) {
-  return <ButtonTransparent onClick={onClick} color="white" >
-    <FontAwesomeIcon icon={faBars}/>
+  return <ButtonTransparent p={0} onClick={onClick} color="white" >
+    <FontAwesomeIcon size="2x" icon={faBars}/>
   </ButtonTransparent>;
 }
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Absolute from 'UI/components/Absolute'
+import Fixed from 'UI/components/Fixed'
 import ToggleBtn from './ToggleBtn'
 import Drawer from 'UI/components/Drawer'
 import NavList from './NavList'
@@ -27,7 +27,7 @@ class SideBarNav extends Component {
   render() {
     const {open} = this.state;
     return (
-           <Absolute>
+             <Fixed top={0} pt={2} >
              <ToggleBtn
                 key="toggle"
                 onClick={this.handleOnToggle}
@@ -43,7 +43,7 @@ class SideBarNav extends Component {
               >
                 <NavList/>
               </Drawer>
-           </Absolute>
+           </Fixed>
   );
   }
 }

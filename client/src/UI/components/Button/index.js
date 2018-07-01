@@ -1,1 +1,1 @@
-export {ButtonTransparent} from 'rebass/emotion';
+export {default as ButtonTransparent} from './ButtonTransparent';

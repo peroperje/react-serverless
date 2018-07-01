@@ -11,7 +11,7 @@ function NavList() {
   return (
     <Flex flexDirection="column" >
       <NavRouterLink to="/odbornici">Odbornici</NavRouterLink>
-      <NavRouterLink to="saziv-skupstine" >Saziv Skupstine</NavRouterLink>
+      <NavRouterLink to="/saziv-skupstine" >Saziv Skupstine</NavRouterLink>
       <NavRouterLink to="/sednica-skupstine">Sednica Skupstine</NavRouterLink>
     </Flex>
   );
