@@ -1,7 +1,10 @@
 import React from 'react';
 import {Switch,Route} from 'react-router-dom'
 
-import Page from './Page'
+import PageList from './Page/PageList'
+import PageAdd from './Page/PageAdd'
+import PageEdit from './Page/PageEdit'
+import PageItem from './Page/PageEdit'
 
 const routDefinition = [
   {
@@ -12,7 +15,7 @@ const routDefinition = [
     exact: true,
     path:"/odbornici",
     pageProps:{
-      title:'Odbornici',
+      entry:'Odbornici',
 
     }
 
@@ -20,7 +23,7 @@ const routDefinition = [
     exact: true,
     path:"/saziv-skupstine",
     pageProps:{
-      title:'Saziv Skupstine',
+      entry:'Saziv Skupstine',
 
     }
 
@@ -28,7 +31,7 @@ const routDefinition = [
     exact: true,
     path:"/sednica-skupstine",
     pageProps:{
-      title:'Sednica Skupstine',
+      entry:'Sednica Skupstine',
 
     }
 
@@ -43,14 +46,14 @@ function Routes() {
   return <Switch>
       {
         routDefinition.map(
-          (route,index) => {
+          ({pageProps,...route},index) => {
             return [
               <Route
                     key={`${index}-list`}
                     {...route}
                     render={
                         (props) => {
-                          return <Page {...props} />
+                          return <PageList {...props} {...pageProps}  />
                         }
                     }
               />,
@@ -59,7 +62,7 @@ function Routes() {
                     {...{...route,...{path:`${route.path}/add`}}}
                     render={
                         (props) => {
-                          return <Page {...props} />
+                          return <PageAdd {...props} {...pageProps} />
                         }
                     }
               />,
@@ -68,7 +71,7 @@ function Routes() {
                     {...{...route,...{path:`${route.path}/:id/edit`}}}
                     render={
                         (props) => {
-                          return <Page {...props} />
+                          return <PageEdit {...props} {...pageProps} />
                         }
                     }
               />,
@@ -77,7 +80,7 @@ function Routes() {
                     {...{...route,...{path:`${route.path}/:id`}}}
                     render={
                         (props) => {
-                          return <Page {...props} />
+                          return <PageItem {...props} {...pageProps} />
                         }
                     }
               />,
