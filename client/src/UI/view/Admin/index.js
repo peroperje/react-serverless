@@ -3,7 +3,7 @@ import React from 'react';
 import MainNav from './MainNav'
 import SideBarNav from './SideBarNav';
 
-import Pages from './Pages';
+import Routes from './Routes';
 
 /**
  * @function Admin
@@ -13,7 +13,7 @@ function Admin() {
   return <div>
     <MainNav/>
     <SideBarNav/>
-    <Pages />
+    <Routes />
   </div>;
 }
 

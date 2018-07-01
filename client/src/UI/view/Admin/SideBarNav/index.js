@@ -14,7 +14,7 @@ import NavList from './NavList'
 class SideBarNav extends Component {
 
   state = {
-    open: true
+    open: false
   };
   handleOnToggle = () => {
     this.setState((prevState)=>({open:!prevState.open}))
