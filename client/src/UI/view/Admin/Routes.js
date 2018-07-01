@@ -35,8 +35,17 @@ const routDefinition = [
 
     }
 
+  },{
+    exact: true,
+    path:"/odbornicka-grupe",
+    pageProps:{
+      entry:'Odbornicke grupe',
+
+    }
+
   }
 ];
+
 
 /**
  * @function Routes

@@ -24,7 +24,7 @@ class Page extends Component {
   render() {
     const {entry} = this.props
     return (
-      <PageWrapper title={`List od ${entry}`} >
+      <PageWrapper title={`List of "${entry}"`} >
         <Flex>
           <Box w={2/3} bg="red">
             List
